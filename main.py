@@ -98,9 +98,13 @@ edges['area new']= edges['length'] * edges['width new']
 
 sum(list(edges['area new']))
 
-#calculate new percentage
+#calculate area shrink %
 
 (float(sum(list(edges['area']))[0][2])-float(sum(list(edges['area new']))[0][2]))/float(sum(list(edges['area']))[0][2])
 
+# Modify oneway from Boolean to int
+edges["oneway"] = edges["oneway"].astype(int)
+
+#df is now complete, with both not shrinked and shrinked roads. Now QGIS visualization and Algorithms.
 
 
