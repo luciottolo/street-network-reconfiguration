@@ -57,7 +57,50 @@ print(GGG)
 #investigate a shipy.sparse what is
 print(nx.adjacency_matrix(GGG))
 
-# Drop Unwanted Columns to clean the tags
-#edges.drop(['oneway', 'lanes', 'maxspeed'], inplace=True, axis=1)
+#25/04 clean the df
+# Load Edges into GeoDataFrame (to be tried w G2 and GGG)
+nodes, edges = ox.graph_to_gdfs(G2)
+edges.head()
+
+#present in the lanes three types of objects: lists (when lanes change in the same street), float (NaN), str (number of lanes)
+#if list we took the first value (assumption)
+#if float (NaN) we substituted with 1
+#if str it becames float
+
+for lines in range(len(edges)):
+    if type(list(edges['lanes'])[lines])==list:
+        edges['lanes'].iloc[lines]=edges['lanes'].iloc[lines][0]
+    elif type(list(edges['lanes'])[lines])==float:
+        edges['lanes'].iloc[lines]=1
+    elif type(list(edges['lanes'])[lines])==str:
+        edges['lanes'].iloc[lines]=float(edges['lanes'].iloc[lines])
+
+
+#in width also present different objects kind. If list take first value, 
+#if float (NaN) use lanes*3.25m (Swissstandard), otherwise make number
+
+for lines in range(len(edges)):
+    if type(list(edges['width'])[lines])==list:
+        edges['width'].iloc[lines]=edges['width'].iloc[lines][0]
+    elif type(list(edges['width'])[lines])==float:
+        edges['width'].iloc[lines]=edges['lanes']*3.25
+    elif type(list(edges['width'])[lines])==str:
+        edges['width'].iloc[lines]=float(edges['width'].iloc[lines])
+
+
+#create new columns, Area, new width (shrink to one lane what is not one lane), new Area  
+
+edges['area'] = edges['length'] * edges['width']
+
+edges['width new']=edges['width']/edges['lanes']
+
+edges['area new']= edges['length'] * edges['width new']
+
+sum(list(edges['area new']))
+
+#calculate new percentage
+
+(float(sum(list(edges['area']))[0][2])-float(sum(list(edges['area new']))[0][2]))/float(sum(list(edges['area']))[0][2])
+
 
 
