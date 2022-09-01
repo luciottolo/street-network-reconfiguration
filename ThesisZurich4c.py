@@ -1,4 +1,5 @@
-
+#here i weigth edges by length/width, but width is the one obtained after a first lanes removal.
+#####################################
 import pandas as pd
 import matplotlib.pyplot as plt
 import osmnx as ox
