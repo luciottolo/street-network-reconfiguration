@@ -1,3 +1,5 @@
+#I download the data from server. I simplify and consolidate. I obtain a SCC, and I go to a single layer configuration
+#########################################################
 import sys; sys.prefix
 import os
 os.getcwd()
@@ -237,4 +239,4 @@ ox.save_graph_geopackage(g, filepath='./data/zurichstronglyconnectedwbc.gpkg', e
 
 
 ##################################################################
-#descriptive in next doc
+#descriptive stat in next doc
