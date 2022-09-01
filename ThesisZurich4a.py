@@ -1,4 +1,5 @@
-
+#here I diet, assigning no weigth at the bc. first two to one-way procedure then lanes removal
+#####################################
 import pandas as pd
 import matplotlib.pyplot as plt
 import osmnx as ox
