@@ -1,3 +1,5 @@
+#filling missing values, having a coherent dataset
+
 import sys; sys.prefix
 import os
 os.getcwd()
@@ -35,9 +37,9 @@ edges = edges[edges.columns.intersection(attrtobekept)]
 g = ox.graph_from_gdfs(nodes, edges)
 
 #after the simplification I notice that lists are created when edges got joint
-#I assume neglectible to have two different values, therefore I select
+#I assume neglectible to have two different values, therefore 
 # par conditio I select the first value
-#also, I have to have the values types respecting what they mean
+#also, I have to set the values types to respect what they mean
 
 #highway
 
