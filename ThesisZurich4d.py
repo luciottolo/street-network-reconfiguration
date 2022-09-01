@@ -1,4 +1,5 @@
-
+#here first two to one-way procedure, edge weigth as length/width, then lanes removal
+########################################
 import pandas as pd
 import matplotlib.pyplot as plt
 import osmnx as ox
