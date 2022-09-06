@@ -1,6 +1,6 @@
 #here It will be checked how data are organized, which values are missing.
 #This section could have been expanded with the calc of the relations between variables, even adding edges bc
-
+#complete graphs present in the graphs docs
 #####################################################
 import sys; sys.prefix
 import os
