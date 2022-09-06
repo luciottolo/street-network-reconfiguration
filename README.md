@@ -15,4 +15,6 @@ In Zurich 6 -> SA reconfiguration (variations could be done by shell or implemen
 
 In Zurich 7,7a -> Travel distances, some Graphs
 
-In 07
+In 19/07 the QGIS layers
+
+In Integrate_bikelanes -> bike procedure and areas calculation
