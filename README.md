@@ -1,4 +1,18 @@
 # Thesis
 
 
+In Zurich 1 -> Obtain e simplify the graph
 
+In Zurich 2 -> Some Descriptive (will be comleted by Graphs and Zurich 2)
+
+In Zurich 3 -> Filling tag procedure 
+
+In Zurich 4a,b,c,d -> Diet procedure
+
+In Zurich 5 -> Obtain initial temperature
+
+In Zurich 6 -> SA reconfiguration (variations could be done by shell or implemented manually)
+
+In Zurich 7,7a -> Travel distances, some Graphs
+
+In 07
